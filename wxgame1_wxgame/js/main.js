@@ -205,6 +205,9 @@ var Main = (function (_super) {
         var stageH = this.stage.stageHeight;
         sky.width = stageW;
         sky.height = stageH;
+        sky.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function () {
+            console.error("touch");
+        }, sky);
         var topMask = new egret.Shape();
         topMask.graphics.beginFill(0x000000, 0.5);
         topMask.graphics.drawRect(0, 0, stageW, 172);
@@ -227,7 +230,7 @@ var Main = (function (_super) {
         colorLabel.textColor = 0xffffff;
         colorLabel.width = stageW - 172;
         colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
+        colorLabel.text = "Hello Cim";
         colorLabel.size = 24;
         colorLabel.x = 172;
         colorLabel.y = 80;
